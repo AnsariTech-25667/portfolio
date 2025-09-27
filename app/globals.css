@@ -68,6 +68,12 @@
   /* Focus ring + a11y */
   .focusable { @apply focus:outline-none focus-visible:focus-ring; }
 
+  /* stronger focus for buttons/links using .focusable from Part 1 */
+  .btn { @apply focusable; }
+
+  /* disabled state normalization */
+  button[disabled] { cursor: not-allowed; }
+
   /* Subtle hover glow for interactive cards */
   .hover-glow {
     @apply transition-shadow duration-300 ease-snappy hover:shadow-glow;

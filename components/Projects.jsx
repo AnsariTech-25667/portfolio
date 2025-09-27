@@ -3,7 +3,8 @@ import { projects } from '@/data/projects';
 import { Github, ExternalLink } from 'lucide-react';
 import { motion } from 'framer-motion';
 import AnimatedCard from './AnimatedCard';
-import AnimatedButton from './AnimatedButton';
+import { Button } from '@/components/ui/Button';
+import { Chip } from '@/components/ui/Chip';
 import ArmViewerCard from './ArmViewer';
 
 export default function Projects() {
@@ -41,40 +42,30 @@ export default function Projects() {
               {project.tags && (
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.tags.map((tag, idx) => (
-                    <span 
-                      key={idx} 
-                      className="skill-chip"
-                    >
+                    <Chip key={idx} variant="outline" size="sm">
                       {tag}
-                    </span>
+                    </Chip>
                   ))}
                 </div>
               )}
 
               <div className="flex gap-3">
-                <AnimatedButton 
-                  as="a"
-                  href={project.codeUrl} 
-                  target="_blank" 
-                  rel="noreferrer noopener"
+                <Button 
                   variant="secondary"
+                  href={project.codeUrl}
                   className="flex-1 justify-center"
-                  aria-label={`View ${project.title} source code`}
+                  iconLeft={<Github className="w-4 h-4" />}
                 >
-                  <Github className="w-4 h-4" />
                   Code
-                </AnimatedButton>
-                <AnimatedButton
-                  as="a"
-                  href={project.demoUrl} 
-                  target="_blank" 
-                  rel="noreferrer noopener"
+                </Button>
+                <Button
+                  variant="primary"
+                  href={project.demoUrl}
                   className="flex-1 justify-center"
-                  aria-label={`View ${project.title} demo`}
+                  iconLeft={<ExternalLink className="w-4 h-4" />}
                 >
-                  <ExternalLink className="w-4 h-4" />
                   Demo
-                </AnimatedButton>
+                </Button>
               </div>
             </AnimatedCard>
           ))}

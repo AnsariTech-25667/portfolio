@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import { Button } from "@/components/ui/Button";
 
 export default function GithubActivity() {
   const [state, setState] = useState({ loading: true, error: false, data: null });
@@ -44,15 +45,13 @@ export default function GithubActivity() {
           <h2 className="section-title">GitHub Activity</h2>
           <div className="card">GitHub data unavailable. Add GITHUB_TOKEN in .env.local to increase rate limits.</div>
           <div className="mt-8 flex justify-center">
-            <a
+            <Button
+              variant="primary"
               href="https://github.com/AnsariTech-25667"
-              target="_blank"
-              rel="noreferrer noopener"
-              className="btn-primary"
-              aria-label="View all repositories on GitHub"
+              iconRight={<span aria-hidden>→</span>}
             >
               View All Repositories
-            </a>
+            </Button>
           </div>
         </div>
       </section>
@@ -101,15 +100,13 @@ export default function GithubActivity() {
         </div>
 
         <div className="mt-8 flex justify-center">
-          <a
+          <Button
+            variant="primary"
             href="https://github.com/AnsariTech-25667"
-            target="_blank"
-            rel="noreferrer noopener"
-            className="btn-primary"
-            aria-label="View all repositories on GitHub"
+            iconRight={<span aria-hidden>→</span>}
           >
             View All Repositories
-          </a>
+          </Button>
         </div>
       </div>
     </section>

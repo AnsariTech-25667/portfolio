@@ -1,11 +1,12 @@
 "use client";
 import Image from "next/image";
+import { Button } from "@/components/ui/Button";
 
 export default function Hero() {
   return (
     <section id="home" className="scroll-mt-24 py-24">
       <div className="container mx-auto px-4 grid items-center gap-10 md:grid-cols-[1.2fr_.8fr]">
-        <div className="space-y-4">
+        <div className="space-y-6">
           <h1 className="headline text-3xl md:text-5xl font-extrabold leading-tight">
             Maaz Ansari
             <br />
@@ -14,6 +15,14 @@ export default function Hero() {
           <p className="text-slate-300">
             Building scalable, intelligent systems that solve real problems.
           </p>
+          <div className="flex flex-wrap gap-4 pt-2">
+            <Button variant="primary" size="lg" href="#projects" iconRight={<span aria-hidden>↗</span>}>
+              View Projects
+            </Button>
+            <Button variant="secondary" size="lg" href="#contact">
+              Contact Me
+            </Button>
+          </div>
         </div>
         <div className="flex justify-center">
           <div className="relative">

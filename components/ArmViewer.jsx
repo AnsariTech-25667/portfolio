@@ -2,6 +2,7 @@
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, Grid, Line, Html } from "@react-three/drei";
 import { useMemo, useRef, useState, useEffect } from "react";
+import { Button } from "@/components/ui/Button";
 
 // Segment lengths in meters (adjust sensibly)
 const L1 = 0.30; // shoulder->elbow
@@ -146,15 +147,13 @@ export default function ArmViewer() {
           <Slider label="Elbow" value={elbow} setValue={setElbow} />
           <Slider label="Wrist" value={wrist} setValue={setWrist} />
 
-          <a
+          <Button
+            variant="primary"
             href="https://ijisae.org/index.php/IJISAE/article/view/6136/4925"
-            target="_blank"
-            rel="noreferrer noopener"
-            className="btn-primary block text-center"
-            aria-label="Open IJISAE paper PDF"
+            iconRight={<span aria-hidden>↗</span>}
           >
             Read the IJISAE Paper
-          </a>
+          </Button>
         </div>
       </div>
     </div>

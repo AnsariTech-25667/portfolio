@@ -1,4 +1,6 @@
-﻿export default function About() {
+﻿import { Chip } from "@/components/ui/Chip";
+
+export default function About() {
   return (
     <section id="about" className="scroll-mt-24 py-24">
       <div className="container mx-auto px-4 grid gap-8 md:grid-cols-2">
@@ -25,7 +27,7 @@
             </p>
             <div className="mt-3 flex flex-wrap gap-2 text-xs">
               {["Data Analysis","Full-Stack Development","Python","JavaScript","MongoDB","Express.js","React.js","Node.js"].map((t) => (
-                <span key={t} className="rounded-full border border-white/10 bg-white/5 px-2 py-1 text-neutral-200">{t}</span>
+                <Chip key={t} variant="outline" size="sm">{t}</Chip>
               ))}
             </div>
           </div>
