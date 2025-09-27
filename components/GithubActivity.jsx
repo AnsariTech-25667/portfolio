@@ -1,6 +1,8 @@
 "use client";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/Button";
+import Section from "@/components/ui/Section";
+import { RepoCard, StatCard } from "./GitHubCards";
 
 export default function GithubActivity() {
   const [state, setState] = useState({ loading: true, error: false, data: null });
@@ -21,29 +23,26 @@ export default function GithubActivity() {
   }, []);
 
   const Stat = ({ label, value }) => (
-    <div className="card">
-      <p className="text-sm text-neutral-400">{label}</p>
-      <p className="text-3xl font-semibold">{value}</p>
-    </div>
+    <StatCard label={label} value={value} />
   );
 
   if (state.loading) {
     return (
-      <section id="github" className="scroll-mt-24 py-24">
+      <Section id="github" title="GitHub Activity" className="scroll-mt-24 py-24">
         <div className="container mx-auto px-4">
-          <h2 className="section-title">GitHub Activity</h2>
-          <div className="mt-4 text-neutral-400">Loading…</div>
+          <div className="mt-4 text-slate-400">Loading…</div>
         </div>
-      </section>
+      </Section>
     );
   }
 
   if (state.error || !state.data) {
     return (
-      <section id="github" className="scroll-mt-24 py-24">
+      <Section id="github" title="GitHub Activity" className="scroll-mt-24 py-24">
         <div className="container mx-auto px-4">
-          <h2 className="section-title">GitHub Activity</h2>
-          <div className="card">GitHub data unavailable. Add GITHUB_TOKEN in .env.local to increase rate limits.</div>
+          <div className="card p-6 rounded-2xl bg-slate-800/20 border border-slate-700/50">
+            <p className="text-slate-300">GitHub data unavailable. Add GITHUB_TOKEN in .env.local to increase rate limits.</p>
+          </div>
           <div className="mt-8 flex justify-center">
             <Button
               variant="primary"
@@ -54,48 +53,25 @@ export default function GithubActivity() {
             </Button>
           </div>
         </div>
-      </section>
+      </Section>
     );
   }
 
   const { public_repos, starredCount, recentCommits, latest } = state.data;
 
   return (
-    <section id="github" className="scroll-mt-24 py-24">
+    <Section id="github" title="GitHub Activity" className="scroll-mt-24 py-24">
       <div className="container mx-auto px-4">
-        <h2 className="headline section-title">GitHub Activity</h2>
-
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 mt-4">
+        <div className="grid gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-3 mt-4">
           <Stat label="Public Repos" value={public_repos ?? 0} />
           <Stat label="Starred" value={starredCount ?? 0} />
           <Stat label="Recent Commits" value={recentCommits ?? 0} />
         </div>
 
-        <h3 className="mt-10 mb-4 text-lg font-semibold">Latest Repositories</h3>
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {(latest || []).map((r) => (
-            <article key={r.id} className="card group">
-              <div className="flex items-center justify-between">
-                <a
-                  className="font-medium text-cyan-200 hover:underline"
-                  href={r.html_url}
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  aria-label={`Open repository ${r.name}`}
-                >
-                  {r.name}
-                </a>
-                <span className="text-xs rounded-full border border-white/10 px-2 py-0.5">
-                  {r.language || "—"}
-                </span>
-              </div>
-              <p className="mt-2 text-sm text-neutral-300 line-clamp-3">
-                {r.description || "No description"}
-              </p>
-              <div className="mt-3 text-xs text-neutral-400">
-                ★ {r.stargazers_count} • Forks {r.forks_count}
-              </div>
-            </article>
+        <h3 className="mt-10 mb-4 text-lg font-semibold text-slate-200">Latest Repositories</h3>
+        <div className="grid gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {(latest || []).map((repo) => (
+            <RepoCard key={repo.id} repo={repo} />
           ))}
         </div>
 
@@ -109,6 +85,6 @@ export default function GithubActivity() {
           </Button>
         </div>
       </div>
-    </section>
+    </Section>
   );
 }

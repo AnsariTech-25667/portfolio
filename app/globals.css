@@ -105,3 +105,48 @@
     radial-gradient(500px 350px at 60% 20%, rgba(147,197,253,.10), transparent 55%);
   animation: nebula-move 40s linear infinite alternate;
 }
+
+@layer components {
+  .card {
+    /* AA contrast over galaxy */
+    color: #e6edf7;
+    backdrop-filter: blur(10px);
+  }
+
+  /* gradient border using mask to keep sharp edges */
+  .gradient-border {
+    position: relative;
+    isolation: isolate;
+  }
+  .gradient-border::before {
+    content: "";
+    position: absolute; 
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px; /* border width */
+    background:
+      conic-gradient(from 180deg,
+        rgba(155,188,255,.35),
+        rgba(179,136,255,.35),
+        rgba(110,231,255,.35),
+        rgba(34,211,238,.35),
+        rgba(155,188,255,.35));
+    -webkit-mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    mask-composite: exclude;
+    z-index: -1;
+    opacity: .9;
+  }
+
+  /* subtle inner stroke for readability */
+  .card > .tilt {
+    background:
+      linear-gradient(to bottom right, rgba(255,255,255,.02), rgba(0,0,0,.06));
+    border-radius: inherit;
+  }
+}

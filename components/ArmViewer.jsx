@@ -3,6 +3,7 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, Grid, Line, Html } from "@react-three/drei";
 import { useMemo, useRef, useState, useEffect } from "react";
 import { Button } from "@/components/ui/Button";
+import Card from "@/components/ui/Card";
 
 // Segment lengths in meters (adjust sensibly)
 const L1 = 0.30; // shoulder->elbow
@@ -111,9 +112,9 @@ export default function ArmViewer() {
   }, [reduced]);
 
   return (
-    <div className="w-full bg-slate-900/50 rounded-xl p-6 backdrop-blur-sm border border-slate-700/30">
-      <h3 className="text-xl font-bold text-white mb-2">Interactive 3D Robotic Arm</h3>
-      <p className="text-sm text-slate-300 mb-6">
+    <Card as="article" title="Interactive 3D Robotic Arm" className="w-full">
+      <h3 className="text-xl font-bold text-slate-100 mb-2">Interactive 3D Robotic Arm</h3>
+      <p className="text-sm text-slate-300/85 mb-6">
         3-DoF forward-kinematics demo inspired by the IJISAE paper. Adjust shoulder, elbow, and wrist to visualize pose and end-effector.
       </p>
 
@@ -156,6 +157,6 @@ export default function ArmViewer() {
           </Button>
         </div>
       </div>
-    </div>
+    </Card>
   );
 }
