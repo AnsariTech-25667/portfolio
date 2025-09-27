@@ -3,6 +3,7 @@ import { skillCategories } from '@/data/skills';
 import { motion } from 'framer-motion';
 import { Code, Database, Cloud, Brain } from 'lucide-react';
 import AnimatedCard from './AnimatedCard';
+import { Chip } from './ui/Chip';
 
 const categoryIcons = {
   'Frontend & Core': Code,
@@ -45,12 +46,13 @@ export default function Skills() {
                 
                 <div className="flex flex-wrap gap-2">
                   {skills.map((skill, skillIndex) => (
-                    <span 
+                    <Chip 
                       key={skillIndex}
-                      className="skill-chip"
+                      variant="solid"
+                      size="sm"
                     >
                       {skill}
-                    </span>
+                    </Chip>
                   ))}
                 </div>
               </AnimatedCard>
