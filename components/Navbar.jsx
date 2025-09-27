@@ -52,7 +52,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="sticky top-0 z-50 bg-white/70 dark:bg-neutral-950/60 backdrop-blur border-b border-neutral-200/60 dark:border-neutral-800/60">
+    <nav className="sticky top-0 z-50 bg-glass border-b border-[var(--border)]">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <a 
@@ -94,7 +94,7 @@ export default function Navbar() {
             <ThemeToggle />
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-lg bg-neutral-100 dark:bg-neutral-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-500"
+              className="p-2 rounded-lg card-solid focusable"
               aria-label="Toggle mobile menu"
             >
               {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
