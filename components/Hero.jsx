@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/Button";
 export default function Hero() {
   return (
     <section id="home" className="scroll-mt-24 py-24">
-      <div className="container mx-auto px-4 grid items-center gap-10 md:grid-cols-[1.2fr_.8fr]">
+      <div className="max-w-7xl mx-auto px-6 md:px-8 grid items-center gap-10 md:grid-cols-[1.2fr_.8fr]">
         <div className="space-y-6">
           <h1 className="headline text-3xl md:text-5xl font-extrabold leading-tight">
             Maaz Ansari

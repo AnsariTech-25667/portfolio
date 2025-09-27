@@ -1,4 +1,5 @@
 import { me } from '@/data/profile';
+import { site } from '@/lib/site';
 import { Github, Linkedin, Instagram, Mail, ExternalLink, Phone, Download } from 'lucide-react';
 
 export default function Footer() {
@@ -21,7 +22,7 @@ export default function Footer() {
 
   return (
     <footer className="border-t border-neutral-200 dark:border-neutral-800 bg-white/60 dark:bg-neutral-900/40">
-      <div className="container mx-auto px-4 py-12">
+      <div className="max-w-7xl mx-auto px-6 md:px-8 py-12">
         <div className="grid gap-8 md:grid-cols-3">
           {/* Brand Section */}
           <div>
@@ -30,12 +31,13 @@ export default function Footer() {
               {me.tagline}
             </p>
             <a 
-              href="/sample-resume.pdf"
-              download="Maaz_Ansari_Resume.pdf"
-              className="btn btn-primary inline-flex items-center gap-2"
+              href={site.resumeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-primary inline-flex items-center gap-2 hover-bulge hover-tint"
             >
-              <Download className="w-4 h-4" />
-              Download Resume
+              <ExternalLink className="w-4 h-4" />
+              Link to Resume
             </a>
           </div>
 

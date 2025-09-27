@@ -1,5 +1,5 @@
 ﻿import "./globals.css";
-import Starfield from "@/components/Starfield";
+import SimpleStarfield from "@/components/SimpleStarfield";
 import { me } from "@/data/profile";
 
 export const metadata = {
@@ -13,13 +13,15 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
-      <body className="min-h-screen bg-[#05070d] text-neutral-100 antialiased selection:bg-cyan-400/30 selection:text-white">
-        {/* Global galaxy background */}
-        <Starfield />
-        <div className="nebula" />
-        <div className="vignette" />
-        {children}
+    <html lang="en" className="h-full scroll-smooth" suppressHydrationWarning>
+      <body className="min-h-screen bg-transparent text-neutral-100 antialiased selection:bg-cyan-400/30 selection:text-white">
+        {/* BACKGROUND LAYERS */}
+        <SimpleStarfield />
+        <div className="nebula pointer-events-none" aria-hidden />
+        {/* CONTENT ABOVE */}
+        <div className="relative z-10">
+          {children}
+        </div>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

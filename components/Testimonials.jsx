@@ -1,5 +1,6 @@
 import { me } from '@/data/profile';
 import { Quote, Star } from 'lucide-react';
+import SectionHeading from './SectionHeading';
 
 export default function Testimonials() {
   if (!me.testimonials || me.testimonials.length === 0) {
@@ -8,12 +9,12 @@ export default function Testimonials() {
 
   return (
     <section id="testimonials" className="section section-alt">
-      <div className="container mx-auto px-4">
-        <h2 className="section-title">Testimonials</h2>
+      <SectionHeading>Testimonials</SectionHeading>
+      <div className="max-w-7xl mx-auto px-6 md:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {me.testimonials.map((testimonial, index) => (
-              <div key={index} className="card">
+              <div key={index} className="card hover-bulge hover-glow">
                 <div className="mb-4">
                   <Quote className="w-6 h-6 text-blue-500" />
                 </div>
