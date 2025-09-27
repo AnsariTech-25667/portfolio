@@ -12,9 +12,9 @@ export default function Hero() {
   return (
     <section id="home" className="scroll-mt-24 py-24 relative min-h-screen flex items-center bg-transparent">
       <div className="container mx-auto px-4 h-screen flex items-center justify-center relative">
-        <div className="max-w-4xl mx-auto text-center z-10 relative glass rounded-2xl p-12">
+        <div className="max-w-4xl mx-auto text-center z-10 relative glass rounded-2xl p-12 hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-500">
           <MotionDiv initial={{ opacity: 0, y: 8 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
-          <h1 className="text-4xl md:text-5xl font-bold leading-tight text-white drop-shadow-lg">
+          <h1 className="text-4xl md:text-5xl font-bold leading-tight text-white drop-shadow-lg cosmic-glow">
             <span className="block">Maaz Ansari</span>
             <span className="block text-lg md:text-xl mt-2 text-blue-100 leading-relaxed drop-shadow-md">
               Software Engineer | Full-Stack Web Developer (MERN) | AI/ML & Data Analytics | Open to Web Development, Backend, Frontend & Software Engineering Roles

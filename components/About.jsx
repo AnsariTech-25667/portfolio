@@ -52,14 +52,14 @@ export default function About() {
   return (
     <section id="about" className="scroll-mt-24 py-24 relative bg-transparent">
       <div className="container mx-auto px-4">
-        <div className="glass rounded-2xl p-8">
+        <div className="glass rounded-2xl p-8 hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-500">
         <MotionDiv
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="section-title text-white text-center mb-12">About Me</h2>
+          <h2 className="section-title text-white text-center mb-12 cosmic-glow">About Me</h2>
         </MotionDiv>
 
         <div className="max-w-4xl mx-auto">

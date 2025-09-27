@@ -100,7 +100,7 @@ export default function GitHubActivity() {
   return (
     <section id="github" className="scroll-mt-24 py-24 relative bg-transparent">
       <div className="container mx-auto px-4 relative z-10">
-        <div className="glass rounded-2xl p-8">
+        <div className="glass rounded-2xl p-8 hover:shadow-2xl hover:shadow-green-500/20 transition-all duration-500">
         <motion.div
           initial="hidden"
           whileInView="visible"

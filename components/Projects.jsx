@@ -13,8 +13,8 @@ export default function Projects() {
   return (
     <section id="projects" className="scroll-mt-24 py-24 relative bg-transparent">
       <div className="container mx-auto px-4">
-        <div className="glass rounded-2xl p-8">
-        <h2 className="section-title text-white text-center mb-12">Projects</h2>
+        <div className="glass rounded-2xl p-8 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-500">
+        <h2 className="section-title text-white text-center mb-12 cosmic-glow">Projects</h2>
         
         {/* Robotic Arm 3D Demo Card */}
         <MotionDiv

@@ -19,14 +19,14 @@ export default function Skills() {
   return (
     <section id="skills" className="scroll-mt-24 py-24 relative bg-transparent">
       <div className="container mx-auto px-4">
-        <div className="glass rounded-2xl p-8">
+        <div className="glass rounded-2xl p-8 hover:shadow-2xl hover:shadow-indigo-500/20 transition-all duration-500">
         <MotionDiv
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="section-title text-white text-center mb-12">Skills & Technologies</h2>
+          <h2 className="section-title text-white text-center mb-12 cosmic-glow">Skills & Technologies</h2>
         </MotionDiv>
         
         <div className="grid gap-6 md:grid-cols-2">

@@ -1,6 +1,8 @@
 import "./globals.css";
 import { me } from '@/data/profile';
+import ParallaxCosmos from '@/components/background/ParallaxCosmos';
 import ParticlesGalaxy from '@/components/background/ParticlesGalaxy';
+import CosmicElements from '@/components/background/CosmicElements';
 
 export const metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://your-domain.example'),
@@ -39,7 +41,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <body className="bg-black text-slate-100 antialiased">
+        <ParallaxCosmos />
         <ParticlesGalaxy />
+        <CosmicElements />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

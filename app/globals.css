@@ -443,40 +443,186 @@ h1,h2,h3 { @apply tracking-tight; }
 /* Global galaxy base */
 html, body { background:#05070d !important; }
 
-/* Drifting nebula layer (under content, over particles) */
-.nebula {
+/* Multiple layered nebula effects */
+.nebula-layer-1 {
+  position: absolute;
+  inset: -30%;
+  z-index: -3;
+  filter: blur(80px) saturate(150%);
+  background:
+    radial-gradient(800px 600px at 15% 25%, rgba(110, 231, 255, .15), transparent 65%),
+    radial-gradient(900px 700px at 85% 75%, rgba(179, 136, 255, .18), transparent 70%),
+    radial-gradient(600px 450px at 60% 15%, rgba(147, 197, 253, .12), transparent 60%);
+  animation: nebula-drift-1 60s linear infinite alternate;
+}
+
+.nebula-layer-2 {
+  position: absolute;
+  inset: -25%;
+  z-index: -2;
+  filter: blur(60px) saturate(120%);
+  background:
+    radial-gradient(700px 500px at 75% 35%, rgba(255, 107, 179, .10), transparent 60%),
+    radial-gradient(650px 400px at 25% 65%, rgba(124, 58, 237, .14), transparent 55%),
+    radial-gradient(550px 350px at 50% 80%, rgba(59, 130, 246, .12), transparent 65%);
+  animation: nebula-drift-2 45s linear infinite alternate-reverse;
+}
+
+.nebula-layer-3 {
   position: absolute;
   inset: -20%;
   z-index: -1;
-  filter: blur(60px) saturate(120%);
+  filter: blur(40px) saturate(140%);
   background:
-    radial-gradient(600px 400px at 20% 30%, rgba(110, 231, 255, .10), transparent 60%),
-    radial-gradient(800px 500px at 80% 70%, rgba(179, 136, 255, .12), transparent 60%),
-    radial-gradient(500px 350px at 60% 20%, rgba(147, 197, 253, .10), transparent 55%);
-  animation: nebula-move 40s linear infinite alternate;
-}
-@keyframes nebula-move {
-  0%   { transform: translate3d(-2%, -1%, 0) scale(1.0); }
-  50%  { transform: translate3d(2%, 1%, 0) scale(1.05); }
-  100% { transform: translate3d(-1%, 2%, 0) scale(1.0); }
+    radial-gradient(500px 300px at 90% 20%, rgba(236, 72, 153, .08), transparent 50%),
+    radial-gradient(400px 250px at 10% 90%, rgba(168, 85, 247, .10), transparent 55%),
+    radial-gradient(450px 280px at 40% 40%, rgba(34, 197, 94, .06), transparent 45%);
+  animation: nebula-drift-3 35s linear infinite;
 }
 
-/* "Glass" cards/sections so space shows through */
+.cosmic-dust {
+  position: absolute;
+  inset: -15%;
+  z-index: -1;
+  filter: blur(25px) opacity(0.3);
+  background:
+    radial-gradient(300px 200px at 20% 40%, rgba(255, 255, 255, .05), transparent 40%),
+    radial-gradient(250px 150px at 80% 60%, rgba(255, 255, 255, .04), transparent 35%),
+    radial-gradient(350px 220px at 50% 20%, rgba(255, 255, 255, .03), transparent 45%);
+  animation: cosmic-drift 25s linear infinite alternate;
+}
+
+/* Enhanced nebula animations */
+@keyframes nebula-drift-1 {
+  0%   { transform: translate3d(-3%, -2%, 0) scale(1.0) rotate(0deg); }
+  25%  { transform: translate3d(2%, 3%, 0) scale(1.08) rotate(90deg); }
+  50%  { transform: translate3d(4%, -1%, 0) scale(1.05) rotate(180deg); }
+  75%  { transform: translate3d(-1%, 4%, 0) scale(1.12) rotate(270deg); }
+  100% { transform: translate3d(-2%, 2%, 0) scale(1.0) rotate(360deg); }
+}
+
+@keyframes nebula-drift-2 {
+  0%   { transform: translate3d(4%, 3%, 0) scale(1.0) rotate(0deg); }
+  33%  { transform: translate3d(-2%, -4%, 0) scale(1.06) rotate(120deg); }
+  66%  { transform: translate3d(3%, 2%, 0) scale(1.10) rotate(240deg); }
+  100% { transform: translate3d(-1%, -1%, 0) scale(1.0) rotate(360deg); }
+}
+
+@keyframes nebula-drift-3 {
+  0%   { transform: translate3d(-2%, 4%, 0) scale(1.0) rotate(0deg); }
+  20%  { transform: translate3d(3%, -2%, 0) scale(1.04) rotate(72deg); }
+  40%  { transform: translate3d(-4%, -3%, 0) scale(1.08) rotate(144deg); }
+  60%  { transform: translate3d(2%, 3%, 0) scale(1.06) rotate(216deg); }
+  80%  { transform: translate3d(-1%, -4%, 0) scale(1.02) rotate(288deg); }
+  100% { transform: translate3d(-2%, 4%, 0) scale(1.0) rotate(360deg); }
+}
+
+@keyframes cosmic-drift {
+  0%   { transform: translate3d(-1%, -2%, 0) scale(1.0); }
+  50%  { transform: translate3d(3%, 2%, 0) scale(1.15); }
+  100% { transform: translate3d(-2%, 3%, 0) scale(1.0); }
+}
+
+/* Enhanced glass cards for better visibility against complex background */
 .glass {
-  background: rgba(10,13,22,.65);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  border: 1px solid rgba(148,163,184,.12);
-  box-shadow: 0 10px 30px rgba(0,0,0,.35);
+  background: rgba(8,15,28,.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(148,163,184,.18);
+  box-shadow: 
+    0 15px 35px rgba(0,0,0,.4),
+    inset 0 1px 0 rgba(255,255,255,.1);
 }
 
-/* Avatar glow effect */
+.glass::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, 
+    rgba(147, 197, 253, .3) 0%, 
+    rgba(179, 136, 255, .2) 50%, 
+    rgba(110, 231, 255, .3) 100%);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: xor;
+  -webkit-mask-composite: xor;
+  pointer-events: none;
+}
+
+/* Avatar glow effect enhanced */
 .avatar-glow::before {
   content:"";
   position:absolute; 
-  inset:-10%;
+  inset:-15%;
   border-radius:9999px;
-  background: radial-gradient(60% 60% at 50% 50%, rgba(179,136,255,.18), transparent 65%);
-  filter: blur(20px);
+  background: radial-gradient(70% 70% at 50% 50%, rgba(179,136,255,.25), transparent 70%);
+  filter: blur(25px);
   z-index:-1;
+  animation: avatar-pulse 3s ease-in-out infinite alternate;
+}
+
+@keyframes avatar-pulse {
+  0% { transform: scale(1.0); opacity: 0.7; }
+  100% { transform: scale(1.1); opacity: 0.9; }
+}
+
+/* Additional cosmic animations */
+@keyframes cosmic-rotation {
+  0% { transform: rotate(0deg) scale(1.0); }
+  25% { transform: rotate(90deg) scale(1.1); }
+  50% { transform: rotate(180deg) scale(1.05); }
+  75% { transform: rotate(270deg) scale(1.15); }
+  100% { transform: rotate(360deg) scale(1.0); }
+}
+
+@keyframes float-cosmic {
+  0%, 100% { 
+    transform: translateY(0px) translateX(0px) rotate(0deg); 
+    filter: brightness(1.0);
+  }
+  25% { 
+    transform: translateY(-15px) translateX(10px) rotate(90deg); 
+    filter: brightness(1.3);
+  }
+  50% { 
+    transform: translateY(-8px) translateX(-5px) rotate(180deg); 
+    filter: brightness(1.1);
+  }
+  75% { 
+    transform: translateY(-20px) translateX(-15px) rotate(270deg); 
+    filter: brightness(1.2);
+  }
+}
+
+/* Enhanced particle effect overrides */
+#stars-background, #galaxy-clusters, #bright-stars {
+  mix-blend-mode: screen;
+}
+
+/* Cosmic glow text effect */
+.cosmic-glow {
+  text-shadow: 
+    0 0 5px currentColor,
+    0 0 10px currentColor,
+    0 0 15px currentColor,
+    0 0 20px rgba(147, 197, 253, 0.5);
+  animation: text-glow 3s ease-in-out infinite alternate;
+}
+
+@keyframes text-glow {
+  from {
+    text-shadow: 
+      0 0 5px currentColor,
+      0 0 10px currentColor,
+      0 0 15px currentColor,
+      0 0 20px rgba(147, 197, 253, 0.5);
+  }
+  to {
+    text-shadow: 
+      0 0 10px currentColor,
+      0 0 20px currentColor,
+      0 0 30px currentColor,
+      0 0 40px rgba(147, 197, 253, 0.8);
+  }
 }
