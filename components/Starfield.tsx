@@ -1,7 +1,7 @@
 "use client";
 import { useMemo } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
-import { loadSlim } from "tsparticles-slim";
+import { loadSlim } from "@tsparticles/slim";
 import { useEffect, useState } from "react";
 
 export default function Starfield() {
