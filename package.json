@@ -27,7 +27,10 @@
     "react": "^19.0.0",
     "react-activity-calendar": "^2.7.14",
     "react-dom": "^19.0.0",
-    "three": "^0.161.0"
+    "react-tsparticles": "^2.12.2",
+    "three": "^0.161.0",
+    "tsparticles-engine": "^2.12.0",
+    "tsparticles-slim": "^2.12.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

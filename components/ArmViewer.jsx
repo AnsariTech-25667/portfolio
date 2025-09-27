@@ -69,7 +69,7 @@ function Arm({ shoulder, elbow, wrist, animate }) {
       </mesh>
       {/* Labels */}
       <Html position={p3} center style={{ pointerEvents: "none" }}>
-        <div className="rounded-md bg-black/60 text-cyan-200 text-xs px-2 py-1 border border-white/10">
+        <div className="rounded-md bg-transparent text-cyan-200 text-xs px-2 py-1 border border-white/10">
           End-Effector
         </div>
       </Html>

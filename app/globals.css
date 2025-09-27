@@ -97,13 +97,25 @@
 .nebula {
   position: fixed;
   inset: -20%;
-  z-index: -9;
+  z-index: -40;       /* above starfield, below content */
+  pointer-events: none;
   filter: blur(60px) saturate(120%);
   background:
     radial-gradient(600px 400px at 20% 30%, rgba(110,231,255,.10), transparent 60%),
     radial-gradient(800px 500px at 80% 70%, rgba(179,136,255,.12), transparent 60%),
     radial-gradient(500px 350px at 60% 20%, rgba(147,197,253,.10), transparent 55%);
   animation: nebula-move 40s linear infinite alternate;
+}
+@keyframes nebula-move {
+  0% { transform: translate3d(-2%,-1%,0); }
+  50%{ transform: translate3d(2%,1%,0) scale(1.05); }
+  100%{ transform: translate3d(-1%,2%,0); }
+}
+
+/* Soft vignette to keep text readable */
+.vignette {
+  position: fixed; inset: 0; z-index: -30; pointer-events: none;
+  background: radial-gradient(1200px 800px at 50% 20%, transparent 0%, rgba(5,7,13,.35) 70%);
 }
 
 @layer components {

@@ -101,7 +101,7 @@ export default function Certifications() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-blue-900 text-white">
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-md border-b border-white/10">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-transparent backdrop-blur-md border-b border-white/10">
         <div className="max-w-6xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
@@ -225,7 +225,7 @@ export default function Certifications() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-black/30 border-t border-white/10 py-8 px-6">
+      <footer className="bg-transparent border-t border-white/10 py-8 px-6">
         <div className="max-w-6xl mx-auto text-center text-gray-400">
           <p>&copy; {new Date().getFullYear()} Maaz Ansari. All rights reserved.</p>
         </div>

@@ -17,7 +17,8 @@ export default function RootLayout({ children }) {
       <body className="min-h-screen bg-[#05070d] text-neutral-100 antialiased selection:bg-cyan-400/30 selection:text-white">
         {/* Global galaxy background */}
         <Starfield />
-        <div className="nebula pointer-events-none" aria-hidden="true" />
+        <div className="nebula" />
+        <div className="vignette" />
         {children}
         <script
           type="application/ld+json"
