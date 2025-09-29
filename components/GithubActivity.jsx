@@ -171,19 +171,16 @@ export default function GithubActivity() {
 
           {/* Enhanced CTA Button */}
           <div className="text-center">
-            <div className="group inline-block">
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-2xl blur-xl opacity-0 group-hover:opacity-50 transition-all duration-500" />
-              <Button
-                variant="primary"
-                href="https://github.com/AnsariTech-25667"
-                iconRight={<span aria-hidden>→</span>}
-                className="relative bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 border-purple-500/30 text-white font-semibold px-8 py-4 rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25 flex items-center gap-3"
-              >
-                <Github className="w-6 h-6" />
-                <span className="text-lg">View All Repositories</span>
-                <Zap className="w-5 h-5" />
-              </Button>
-            </div>
+            <Button
+              variant="primary"
+              href="https://github.com/AnsariTech-25667"
+              iconRight={<span aria-hidden>→</span>}
+              className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 border-purple-500/30 text-white font-semibold px-8 py-4 rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25 flex items-center gap-3"
+            >
+              <Github className="w-6 h-6" />
+              <span className="text-lg">View All Repositories</span>
+              <Zap className="w-5 h-5" />
+            </Button>
           </div>
         </div>
       </section>
@@ -244,19 +241,16 @@ export default function GithubActivity() {
 
         {/* Enhanced CTA Button */}
         <div className="text-center">
-          <div className="group inline-block">
-            <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-2xl blur-xl opacity-0 group-hover:opacity-50 transition-all duration-500" />
-            <Button
-              variant="primary"
-              href="https://github.com/AnsariTech-25667"
-              iconRight={<span aria-hidden>→</span>}
-              className="relative bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 border-purple-500/30 text-white font-semibold px-8 py-4 rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25 flex items-center gap-3"
-            >
-              <Github className="w-6 h-6" />
-              <span className="text-lg">View All Repositories</span>
-              <Zap className="w-5 h-5" />
-            </Button>
-          </div>
+          <Button
+            variant="primary"
+            href="https://github.com/AnsariTech-25667"
+            iconRight={<span aria-hidden>→</span>}
+            className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 border-purple-500/30 text-white font-semibold px-8 py-4 rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25 flex items-center gap-3"
+          >
+            <Github className="w-6 h-6" />
+            <span className="text-lg">View All Repositories</span>
+            <Zap className="w-5 h-5" />
+          </Button>
         </div>
       </div>
     </section>

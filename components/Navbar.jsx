@@ -11,12 +11,12 @@ const links = [
   { href: "/#projects", label: "Projects" },
   { href: "/#skills", label: "Skills" },
   { href: "/#achievements", label: "Achievements" },
+  { href: "/#education", label: "Education" },
   { href: "/#experience", label: "Experience" },
+  { href: "/#research", label: "Research & Publications" },
   { href: "/#github", label: "GitHub" },
   { href: "/#contact", label: "Contact" },
   { href: "/certifications", label: "Certifications" },
-  { href: "/publications", label: "Publications" },
-  { href: "/blog", label: "Blog" },
 ];
 
 export default function Navbar() {
@@ -50,7 +50,7 @@ export default function Navbar() {
       { threshold: 0.6, rootMargin: '-20% 0px -20% 0px' }
     );
 
-    const sections = ['home', 'about', 'projects', 'skills', 'achievements', 'experience', 'github', 'contact'];
+    const sections = ['home', 'about', 'projects', 'skills', 'achievements', 'education', 'experience', 'research', 'github', 'contact'];
     sections.forEach((id) => {
       const element = document.getElementById(id);
       if (element) observer.observe(element);
