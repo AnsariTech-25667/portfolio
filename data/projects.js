@@ -13,6 +13,18 @@ export const projects = [
     }
   },
   {
+    title: "Resume Builder",
+    description: "A polished, recruiter-facing resume builder with multiple templates, AI-assisted summary and bullet refinement, GIF recorder for portfolio screenshots, and export-to-PDF. Built with React + Vite for a fast dev experience and an Express server for optional API features.",
+    tags: ["React", "Vite", "Express", "AI", "PDF Export", "Accessibility"],
+  code: "https://github.com/AnsariTech-25667/resume-builder",
+  demo: "https://portfolio-9kg8.vercel.app/",
+    featured: false,
+    metrics: {
+      highlights: "Multiple templates, AI-assisted improvements, export to PDF",
+      ready: "Developer-friendly; ready for deployment"
+    }
+  },
+  {
     title: "PromptPilot",
     description: "Enterprise AI chat workspace with Next.js 15, MongoDB, and OpenAI GPT integration. Features real-time streaming completions, intelligent prompt library management, and Markdown export. Deployed with Vercel edge functions achieving sub-200ms response times.",
     tags: ["Next.js", "MongoDB", "Clerk", "OpenAI", "Markdown"],
