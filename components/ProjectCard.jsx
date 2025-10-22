@@ -51,7 +51,7 @@ export default function ProjectCard({ project, featured = false }) {
                 <span className="text-xs font-bold text-green-300 bg-green-500/20 px-2 py-1 rounded-full">LIVE • YOU ARE HERE</span>
               </div>
             )}
-            <h3 className={`${featured ? 'text-2xl' : 'text-xl'} font-bold ${isPortfolio ? 'bg-gradient-to-r from-cyan-300 to-blue-300 bg-clip-text text-transparent' : 'text-white'} mb-2 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:${theme.primary} group-hover:bg-clip-text transition-all duration-300 drop-shadow-lg line-clamp-2`}>
+            <h3 className={`${featured ? 'text-2xl' : 'text-xl'} font-bold ${isPortfolio ? 'bg-gradient-to-r from-cyan-300 to-blue-300 bg-clip-text text-transparent' : 'text-white'} mb-2 transition-all duration-300 drop-shadow-lg line-clamp-2`}>
               {project.title}
             </h3>
             {featured && !isPortfolio && (
