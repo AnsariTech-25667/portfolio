@@ -13,15 +13,16 @@ export const projects = [
     }
   },
   {
-    title: "Resume Builder",
-    description: "A polished, recruiter-facing resume builder with multiple templates, AI-assisted summary and bullet refinement, GIF recorder for portfolio screenshots, and export-to-PDF. Built with React + Vite for a fast dev experience and an Express server for optional API features.",
-    tags: ["React", "Vite", "Express", "AI", "PDF Export", "Accessibility"],
-  code: "https://github.com/AnsariTech-25667/resume-builder",
-  demo: "https://portfolio-9kg8.vercel.app/",
+    title: "ResumeForge AI",
+    description: "Polished, recruiter-friendly resume builder bridging design-forward templates with ATS compatibility. Features multiple editable templates, AI-assisted bullet refinement and summary generation, PDF export, and print-ready CSS. Built during professional experience at Netraket (Denmark-based startup) and Softmaque Consulting to solve real hiring workflow challenges.",
+    tags: ["React", "Vite", "Express", "AI", "PDF Export", "Redux", "Tailwind CSS"],
+    code: "https://github.com/AnsariTech-25667/resume-builder",
+    demo: "https://portfolio-9kg8.vercel.app/",
     featured: false,
     metrics: {
-      highlights: "Multiple templates, AI-assisted improvements, export to PDF",
-      ready: "Developer-friendly; ready for deployment"
+      innovation: "AI-powered resume optimization",
+      impact: "ATS-friendly + recruiter-readable",
+      tech: "React + Vite + Express stack"
     }
   },
   {
@@ -30,6 +31,19 @@ export const projects = [
     tags: ["Next.js", "MongoDB", "Clerk", "OpenAI", "Markdown"],
     code: "https://github.com/AnsariTech-25667/PromptPilot",
     demo: "https://github.com/AnsariTech-25667/PromptPilot"
+  },
+  {
+    title: "HireFlow AI - Job Portal",
+    description: "Enterprise-grade MERN stack job portal with glassmorphism UI, AI-powered job matching, and real-time analytics dashboard. Features dual interfaces for job seekers and recruiters, WebSocket integration for live updates, Chart.js visualizations, advanced application tracking, and Cloudinary file management. Built with modern security practices and scalable architecture.",
+    tags: ["MERN", "Glassmorphism", "AI/ML", "WebSocket", "Chart.js", "Clerk", "Cloudinary"],
+    code: "https://github.com/AnsariTech-25667/job-portal",
+    demo: "https://github.com/AnsariTech-25667/job-portal",
+    featured: false,
+    metrics: {
+      architecture: "Full-stack MERN + AI",
+      features: "Real-time + Analytics + AI matching",
+      design: "Glassmorphism + Dark/Light themes"
+    }
   },
   {
     title: "NovaDraft",
