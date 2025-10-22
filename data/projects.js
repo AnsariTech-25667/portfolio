@@ -16,7 +16,7 @@ export const projects = [
     title: "ResumeForge AI",
     description: "Polished, recruiter-friendly resume builder bridging design-forward templates with ATS compatibility. Features multiple editable templates, AI-assisted bullet refinement and summary generation, PDF export, and print-ready CSS. Built during professional experience at Netraket (Denmark-based startup) and Softmaque Consulting to solve real hiring workflow challenges.",
     tags: ["React", "Vite", "Express", "AI", "PDF Export", "Redux", "Tailwind CSS"],
-    code: "https://github.com/AnsariTech-25667/resume-builder",
+    code: "https://github.com/AnsariTech-25667/Resumeforge-ai",
     demo: "https://portfolio-9kg8.vercel.app/",
     featured: false,
     metrics: {
@@ -36,8 +36,8 @@ export const projects = [
     title: "HireFlow AI - Job Portal",
     description: "Enterprise-grade MERN stack job portal with glassmorphism UI, AI-powered job matching, and real-time analytics dashboard. Features dual interfaces for job seekers and recruiters, WebSocket integration for live updates, Chart.js visualizations, advanced application tracking, and Cloudinary file management. Built with modern security practices and scalable architecture.",
     tags: ["MERN", "Glassmorphism", "AI/ML", "WebSocket", "Chart.js", "Clerk", "Cloudinary"],
-    code: "https://github.com/AnsariTech-25667/job-portal",
-    demo: "https://github.com/AnsariTech-25667/job-portal",
+    code: "https://github.com/AnsariTech-25667/HireFlow-AI",
+    demo: "https://github.com/AnsariTech-25667/HireFlow-AI",
     featured: false,
     metrics: {
       architecture: "Full-stack MERN + AI",
