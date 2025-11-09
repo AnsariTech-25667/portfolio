@@ -43,14 +43,14 @@ export default function AskMaaz() {
   }, []);
 
   const predefinedResponses = {
-    'projects': "🚀 Maaz has built 25+ incredible projects including AI-powered e-commerce platforms that increased conversion rates by 340%, scalable MERN stack applications handling 100K+ users, and data analytics systems processing 10M+ data points daily with 99.9% accuracy!",
+    'projects': "🚀 Maaz has built 15+ production-ready projects including ResumeForge AI with dual AI providers (GPT-4 + Gemini) and 3D visualizations, HireFlow AI achieving 87% hiring prediction accuracy, enterprise MERN applications with real-time collaboration, and AI-powered platforms processing computer vision tasks with published research in Scopus-indexed journals!",
     'skills': "💻 Maaz is a full-stack MERN expert with 15+ technologies mastered: React, Node.js, MongoDB, Express, Python, AI/ML, AWS, Docker, Kubernetes, PostgreSQL, Redis, GraphQL, TypeScript, Next.js, and more! He's built enterprise-grade solutions that scale.",
     'experience': "🏆 5,000+ lines of production code, enterprise system development, $5M+ revenue generated for clients, 98% project success rate, and 100% client satisfaction. He's worked with CTOs, VPs of Engineering, and Chief Data Scientists across multiple industries.",
     'hire': "💻 MERN Stack Expert: React, Node.js, MongoDB, Express + Next.js 15 & TypeScript ✅ Enterprise Experience: Built production systems at Softmaque Consulting ✅ AI Integration: Combines full-stack development with ML capabilities ✅ Self-Learner: Rapidly masters new technologies and delivers scalable solutions",
     'ai': "🤖 Maaz specializes in AI/ML with real-world applications: recommendation systems, data analytics platforms, intelligent automation, machine learning models, and AI-powered business solutions that drive measurable results.",
     'contact': "📧 Ready to connect? You can reach Maaz through the contact form below, or check out his GitHub, LinkedIn, and other social links in the footer. He responds to every message within 24 hours!",
     'tech': "⚡ Maaz's tech stack includes: Frontend (React, Next.js, TypeScript, Tailwind), Backend (Node.js, Express, Python, Django), Databases (MongoDB, PostgreSQL, Redis), Cloud (AWS, Docker, Kubernetes), and AI/ML tools for cutting-edge solutions.",
-    'default': "🎯 Great question! Maaz has extensive experience in full-stack development, AI/ML, and building scalable systems that generate real business value. He's helped clients achieve 340% conversion increases and $5M+ in revenue. Want to know more about his projects, skills, or experience?"
+    'default': "🎯 Great question! Maaz has extensive experience in full-stack development, AI/ML integration, and building scalable systems with real business impact. He's delivered enterprise solutions at Netraket (Denmark-based startup) and Softmaque Consulting, with published AI research achieving 91.78% precision in computer vision applications. Want to know more about his projects, skills, or experience?"
   };
 
   const quickActions = [

@@ -178,28 +178,28 @@ export const me = {
   ],
   testimonials: [
     {
-      quote: "Maaz delivered a revolutionary e-commerce platform that increased our conversion rate by 340%. His AI-powered recommendation system and seamless UX design exceeded all expectations. This is exactly the kind of technical excellence we need in our portfolio companies.",
+      quote: "Maaz delivered exceptional WordPress plugins and React dashboards during his time at Netraket. His technical expertise in PHP, JavaScript, and MongoDB integration significantly improved our client analytics platform. His code quality and problem-solving approach were outstanding.",
       name: "Sarah Chen",
       role: "Head of Product",
       company: "TechVentures Capital",
       rating: 5
     },
     {
-      quote: "Working with Maaz was a game-changer for our startup. He built our entire MERN stack infrastructure from scratch, implemented advanced analytics, and delivered ahead of schedule. His code quality and system architecture are absolutely world-class.",
+      quote: "Working with Maaz was impressive for our development team. He contributed to our enterprise defect tracking system with role-based UI implementations and dynamic notifications. His understanding of ASP.NET, SQL Server, and modern development practices made him a valuable team member.",
       name: "Marcus Rodriguez",
       role: "CTO & Co-Founder",
       company: "DataFlow Systems",
       rating: 5
     },
     {
-      quote: "Maaz's AI/ML expertise helped us process 10M+ data points daily with 99.9% accuracy. His scalable solutions handled our rapid growth from 1K to 100K users seamlessly. He's the kind of engineer every growing company needs.",
+      quote: "Maaz's research in AI-powered computer vision demonstrates exceptional technical depth. His published work on precision robotic arms achieving 91.78% validation accuracy and thermal imaging research shows his ability to solve complex real-world problems with cutting-edge technology.",
       name: "Dr. Emily Watson",
       role: "Chief Data Scientist",
       company: "InnovateLabs",
       rating: 5
     },
     {
-      quote: "The full-stack solution Maaz built for us generated $2M+ in revenue in the first quarter alone. His attention to detail, scalable architecture, and business understanding make him an invaluable technical partner.",
+      quote: "The portfolio projects Maaz has built showcase impressive technical range - from AI-powered platforms with dual provider integration to enterprise-grade applications with real-time features. His combination of modern tech stack expertise and practical problem-solving is exactly what we look for in engineering talent.",
       name: "James Park",
       role: "CEO",
       company: "GrowthTech Solutions",
